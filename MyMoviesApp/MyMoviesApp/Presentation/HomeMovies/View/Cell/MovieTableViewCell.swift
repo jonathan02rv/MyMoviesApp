@@ -13,11 +13,13 @@ class MovieTableViewCell: UITableViewCell {
     }
     public static let identifier = "MovieTableViewCell"
     
+    @IBOutlet weak var movieImage: UIImageView!
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var sinopsis: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        movieImage.contentMode = .scaleAspectFit
         // Initialization code
     }
 

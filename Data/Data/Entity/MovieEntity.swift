@@ -26,7 +26,7 @@ struct MovieEntity:Codable{
 extension MovieEntity{
     static func maperArray(data:[MovieEntity])->[MovieModel]{
         data.map{
-            MovieModel(movieId: $0.id, title: $0.title, sinopsis: $0.overview, voteAverage: $0.vote_average, image: $0.backdrop_path)
+            MovieModel(movieId: $0.id, title: $0.title, sinopsis: $0.overview, voteAverage: $0.vote_average, image: "\(AppEnvironment.configuration.serverImageBaseUrl)\($0.backdrop_path)")
         }
     }
 }

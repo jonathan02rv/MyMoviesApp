@@ -29,20 +29,20 @@ public protocol Configuration {
     static var serverBaseUrl: String { get }
 }
 
-struct ProdAppConfig: Configuration {
+struct ProdAppConfig: Configuration {    
     static let serverBaseUrl = "https://api.themoviedb.org/3"
     static var apiKey = "?api_key=5db6e65d7a5cb9e8ef2dee912c6016d8"
-    static var serverImageBaseUrl = "https://image.tmdb.org/t/p/w200/"
+    static var serverImageBaseUrl = "https://image.tmdb.org/t/p/w400"
 }
 
 struct UatAppConfig: Configuration {
     static let serverBaseUrl = "https://api.themoviedb.org/3"
     static var apiKey = "?api_key=5db6e65d7a5cb9e8ef2dee912c6016d8"
-    static var serverImageBaseUrl = "https://image.tmdb.org/t/p/w200/"
+    static var serverImageBaseUrl = "https://image.tmdb.org/t/p/w400"
 }
 
 struct DevAppConfig: Configuration {
     static let serverBaseUrl = "https://api.themoviedb.org/3"
     static var apiKey = "?api_key=5db6e65d7a5cb9e8ef2dee912c6016d8"
-    static var serverImageBaseUrl = "https://image.tmdb.org/t/p/w200/"
+    static var serverImageBaseUrl = "https://image.tmdb.org/t/p/w400"
 }

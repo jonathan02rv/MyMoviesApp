@@ -35,8 +35,8 @@ class HomeMoviesViewController: UIViewController {
     private func setupTableView() {
         self.movieTable.delegate = self
         self.movieTable.dataSource = self
+        movieTable.rowHeight = UITableView.automaticDimension
         self.movieTable.register(MovieTableViewCell.nib(), forCellReuseIdentifier: MovieTableViewCell.identifier)
-        self.movieTable.reloadData()
     }
     
     
@@ -61,6 +61,7 @@ extension HomeMoviesViewController: UITableViewDelegate, UITableViewDataSource{
         let movie = viewModel.getMovie(row:indexPath.row)
         cell.title.text = movie.title
         cell.sinopsis.text = movie.sinopsis
+        cell.movieImage.downloaded(from: movie.image)
         return cell
     }
     
