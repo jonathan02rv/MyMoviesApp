@@ -14,25 +14,19 @@ struct MoviewPage: Codable{
 }
 
 struct MovieEntity:Codable{
-    let movieId:Int
+    let id:Int
     let title:String
-    let voteAverage:Double
-    let description:String
-    let image:String
+    let vote_average:Double
+    let overview:String
+    let backdrop_path:String
     
-    enum CokingKeys: String, CodingKey{
-        case movieId = "id"
-        case title
-        case voteAverage = "vote_average"
-        case description = "overview"
-        case image = "backdrop_path"
-    }
+   
 }
 
 extension MovieEntity{
     static func maperArray(data:[MovieEntity])->[MovieModel]{
         data.map{
-            MovieModel(movieId: $0.movieId, title: $0.title, sinopsis: $0.description, voteAverage: $0.voteAverage, image: $0.image)
+            MovieModel(movieId: $0.id, title: $0.title, sinopsis: $0.overview, voteAverage: $0.vote_average, image: $0.backdrop_path)
         }
     }
 }

@@ -11,14 +11,14 @@ public protocol MoviesUsesCasesProtocol {
     func getMoviesList(_ completion:@escaping (Swift.Result<[MovieModel],ErrorModel>)->Void)
 }
 
-struct MoviesUsesCases: MoviesUsesCasesProtocol{
+public struct MoviesUsesCases: MoviesUsesCasesProtocol{
     var repository: MoviesRepositoryProtocol
     
     public init(repository: MoviesRepositoryProtocol){
         self.repository = repository
     }
     
-    func getMoviesList(_ completion: @escaping (Result<[MovieModel], ErrorModel>) -> Void) {
+    public func getMoviesList(_ completion: @escaping (Result<[MovieModel], ErrorModel>) -> Void) {
         repository.getMoviesList(completion)
     }
     

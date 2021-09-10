@@ -8,7 +8,7 @@
 import Foundation
 import Domain
 
-class MoviesRepository:MoviesRepositoryProtocol{
+public struct MoviesRepository:MoviesRepositoryProtocol{
     
     private let networkDataSource: DataSourceNetworkProtocol
     
@@ -16,7 +16,7 @@ class MoviesRepository:MoviesRepositoryProtocol{
         self.networkDataSource = DataSourceNetwork()
     }
     
-    func getMoviesList(_ completion: @escaping (Result<[MovieModel], ErrorModel>) -> Void) {
+    public func getMoviesList(_ completion: @escaping (Result<[MovieModel], ErrorModel>) -> Void) {
         
         let request = RequestOBjectMostPopular()
         networkDataSource.getMoviesList(request: request) { (result) in
