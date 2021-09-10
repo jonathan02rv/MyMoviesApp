@@ -8,7 +8,7 @@
 import Foundation
 
 public protocol MoviesUsesCasesProtocol {
-    func getMoviesList(_ completion:@escaping (Swift.Result<[MovieModel],Error>)->Void)
+    func getMoviesList(_ completion:@escaping (Swift.Result<[MovieModel],ErrorModel>)->Void)
 }
 
 struct MoviesUsesCases: MoviesUsesCasesProtocol{
@@ -18,8 +18,8 @@ struct MoviesUsesCases: MoviesUsesCasesProtocol{
         self.repository = repository
     }
     
-    func getMoviesList(_ completion: @escaping (Result<[MovieModel], Error>) -> Void) {
-        
+    func getMoviesList(_ completion: @escaping (Result<[MovieModel], ErrorModel>) -> Void) {
+        repository.getMoviesList(completion)
     }
     
     

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F22546026EBC27E0004C2A1 /* ErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F22545F26EBC27E0004C2A1 /* ErrorModel.swift */; };
 		3F63CC5A26EBA02B006D0CA2 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F63CC5026EBA02A006D0CA2 /* Domain.framework */; };
 		3F63CC5F26EBA02B006D0CA2 /* DomainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F63CC5E26EBA02B006D0CA2 /* DomainTests.swift */; };
 		3F63CC6126EBA02B006D0CA2 /* Domain.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F63CC5326EBA02A006D0CA2 /* Domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F22545F26EBC27E0004C2A1 /* ErrorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorModel.swift; sourceTree = "<group>"; };
 		3F63CC5026EBA02A006D0CA2 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F63CC5326EBA02A006D0CA2 /* Domain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Domain.h; sourceTree = "<group>"; };
 		3F63CC5426EBA02A006D0CA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,6 +58,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F22545D26EBC2610004C2A1 /* ErrorModel */ = {
+			isa = PBXGroup;
+			children = (
+				3F22545F26EBC27E0004C2A1 /* ErrorModel.swift */,
+			);
+			path = ErrorModel;
+			sourceTree = "<group>";
+		};
+		3F22545E26EBC2690004C2A1 /* MovieModel */ = {
+			isa = PBXGroup;
+			children = (
+				3F63CC9626EBA0AD006D0CA2 /* MovieModel.swift */,
+			);
+			path = MovieModel;
+			sourceTree = "<group>";
+		};
 		3F63CC4626EBA02A006D0CA2 = {
 			isa = PBXGroup;
 			children = (
@@ -98,7 +116,8 @@
 		3F63CC9526EBA096006D0CA2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				3F63CC9626EBA0AD006D0CA2 /* MovieModel.swift */,
+				3F22545E26EBC2690004C2A1 /* MovieModel */,
+				3F22545D26EBC2610004C2A1 /* ErrorModel */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -230,6 +249,7 @@
 			files = (
 				3F63CCBA26EBA4BB006D0CA2 /* MoviesUsesCases.swift in Sources */,
 				3F63CC9726EBA0AD006D0CA2 /* MovieModel.swift in Sources */,
+				3F22546026EBC27E0004C2A1 /* ErrorModel.swift in Sources */,
 				3F63CCBE26EBA582006D0CA2 /* MoviesRepositoryProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

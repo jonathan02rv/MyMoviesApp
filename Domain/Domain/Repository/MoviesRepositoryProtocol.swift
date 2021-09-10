@@ -8,5 +8,5 @@
 import Foundation
 
 public protocol MoviesRepositoryProtocol {
-    func getMoviesList(_ completion:@escaping (Swift.Result<[MovieModel],Error>)->Void)
+    func getMoviesList(_ completion:@escaping (Swift.Result<[MovieModel],ErrorModel>)->Void)
 }

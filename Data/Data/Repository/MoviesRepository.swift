@@ -16,8 +16,17 @@ class MoviesRepository:MoviesRepositoryProtocol{
         self.networkDataSource = DataSourceNetwork()
     }
     
-    func getMoviesList(_ completion: @escaping (Result<[MovieModel], Error>) -> Void) {
+    func getMoviesList(_ completion: @escaping (Result<[MovieModel], ErrorModel>) -> Void) {
         
+        let request = RequestOBjectMostPopular()
+        networkDataSource.getMoviesList(request: request) { (result) in
+            switch result{
+            case .success(let data):
+                completion(.success(MovieEntity.maperArray(data: data)))
+            case .failure(let error):
+                completion(.failure(ErrorEntity.maper(errorData: error)))
+            }
+        }
     }
     
     
