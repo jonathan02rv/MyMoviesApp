@@ -12,6 +12,9 @@
 		3F63CC8A26EBA075006D0CA2 /* Data.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F63CC7C26EBA074006D0CA2 /* Data.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3F63CCA326EBA142006D0CA2 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F63CCA226EBA142006D0CA2 /* Domain.framework */; };
 		3F63CCA826EBA174006D0CA2 /* MovieEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F63CCA726EBA174006D0CA2 /* MovieEntity.swift */; };
+		3F63CCC226EBA5C8006D0CA2 /* MoviesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F63CCC126EBA5C8006D0CA2 /* MoviesRepository.swift */; };
+		3F63CCCA26EBA74E006D0CA2 /* DataSourceNetworkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F63CCC926EBA74E006D0CA2 /* DataSourceNetworkProtocol.swift */; };
+		3F63CCCF26EBA7D5006D0CA2 /* DataSourceNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F63CCCE26EBA7D5006D0CA2 /* DataSourceNetwork.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +36,9 @@
 		3F63CC8926EBA075006D0CA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F63CCA226EBA142006D0CA2 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F63CCA726EBA174006D0CA2 /* MovieEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieEntity.swift; sourceTree = "<group>"; };
+		3F63CCC126EBA5C8006D0CA2 /* MoviesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesRepository.swift; sourceTree = "<group>"; };
+		3F63CCC926EBA74E006D0CA2 /* DataSourceNetworkProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSourceNetworkProtocol.swift; sourceTree = "<group>"; };
+		3F63CCCE26EBA7D5006D0CA2 /* DataSourceNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSourceNetwork.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +121,7 @@
 		3F63CCB226EBA281006D0CA2 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				3F63CCC126EBA5C8006D0CA2 /* MoviesRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -122,6 +129,7 @@
 		3F63CCB326EBA288006D0CA2 /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
+				3F63CCC726EBA725006D0CA2 /* Network */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -131,6 +139,31 @@
 			children = (
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		3F63CCC726EBA725006D0CA2 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				3F63CCC826EBA72E006D0CA2 /* Protocols */,
+				3F63CCCD26EBA7B0006D0CA2 /* Implementation */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		3F63CCC826EBA72E006D0CA2 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				3F63CCC926EBA74E006D0CA2 /* DataSourceNetworkProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		3F63CCCD26EBA7B0006D0CA2 /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				3F63CCCE26EBA7D5006D0CA2 /* DataSourceNetwork.swift */,
+			);
+			path = Implementation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,7 +275,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F63CCC226EBA5C8006D0CA2 /* MoviesRepository.swift in Sources */,
+				3F63CCCA26EBA74E006D0CA2 /* DataSourceNetworkProtocol.swift in Sources */,
 				3F63CCA826EBA174006D0CA2 /* MovieEntity.swift in Sources */,
+				3F63CCCF26EBA7D5006D0CA2 /* DataSourceNetwork.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
