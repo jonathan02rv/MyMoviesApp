@@ -60,6 +60,7 @@ extension HomeMoviesViewController: UITableViewDelegate, UITableViewDataSource{
         }
         let movie = viewModel.getMovie(row:indexPath.row)
         cell.title.text = movie.title
+        cell.sinopsis.text = movie.sinopsis
         return cell
     }
     

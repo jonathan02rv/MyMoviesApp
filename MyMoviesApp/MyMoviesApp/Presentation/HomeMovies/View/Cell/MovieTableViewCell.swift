@@ -14,6 +14,7 @@ class MovieTableViewCell: UITableViewCell {
     public static let identifier = "MovieTableViewCell"
     
     @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var sinopsis: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
