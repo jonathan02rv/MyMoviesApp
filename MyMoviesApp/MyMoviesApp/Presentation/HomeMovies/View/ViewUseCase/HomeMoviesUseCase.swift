@@ -8,7 +8,7 @@
 import Foundation
 import Domain
 
-public protocol HomeMoviesUseCaseProtocol{
+protocol HomeMoviesUseCaseProtocol {
     func getMoviesList(_ completion:@escaping (Swift.Result<[MovieModel],ErrorModel>)->Void)
 }
 

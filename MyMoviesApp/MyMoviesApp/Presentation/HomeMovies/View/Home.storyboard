@@ -23,18 +23,29 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7Af-1w-7ii">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="EYZ-oH-LTG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="nKe-f8-w8w" firstAttribute="centerX" secondItem="uwJ-aE-OPv" secondAttribute="centerX" id="3LC-7y-tXb"/>
+                            <constraint firstItem="7Af-1w-7ii" firstAttribute="top" secondItem="EYZ-oH-LTG" secondAttribute="top" id="Cpm-UA-gMJ"/>
+                            <constraint firstItem="7Af-1w-7ii" firstAttribute="trailing" secondItem="EYZ-oH-LTG" secondAttribute="trailing" id="RyK-9l-wz8"/>
+                            <constraint firstItem="7Af-1w-7ii" firstAttribute="leading" secondItem="EYZ-oH-LTG" secondAttribute="leading" id="YDx-3G-70o"/>
+                            <constraint firstItem="7Af-1w-7ii" firstAttribute="bottom" secondItem="EYZ-oH-LTG" secondAttribute="bottom" id="aFT-1H-HtV"/>
                             <constraint firstItem="nKe-f8-w8w" firstAttribute="centerY" secondItem="uwJ-aE-OPv" secondAttribute="centerY" id="cNb-xC-OJM"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="movieTable" destination="7Af-1w-7ii" id="9Qg-19-W4f"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="faF-El-dET" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="216" y="96"/>
+            <point key="canvasLocation" x="215.625" y="95.070422535211264"/>
         </scene>
     </scenes>
     <resources>
