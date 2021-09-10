@@ -31,18 +31,18 @@ public protocol Configuration {
 
 struct ProdAppConfig: Configuration {
     static let serverBaseUrl = "https://api.themoviedb.org/3"
-    static var apiKey = "5db6e65d7a5cb9e8ef2dee912c6016d8"
+    static var apiKey = "?api_key=5db6e65d7a5cb9e8ef2dee912c6016d8"
     static var serverImageBaseUrl = "https://image.tmdb.org/t/p/w200/"
 }
 
 struct UatAppConfig: Configuration {
     static let serverBaseUrl = "https://api.themoviedb.org/4"
-    static var apiKey = "5db6e65d7a5cb9e8ef2dee912c6016d8"
+    static var apiKey = "?api_key=5db6e65d7a5cb9e8ef2dee912c6016d8"
     static var serverImageBaseUrl = "https://image.tmdb.org/t/p/w200/"
 }
 
 struct DevAppConfig: Configuration {
     static let serverBaseUrl = "https://api.themoviedb.org/4"
-    static var apiKey = "5db6e65d7a5cb9e8ef2dee912c6016d8"
+    static var apiKey = "?api_key=5db6e65d7a5cb9e8ef2dee912c6016d8"
     static var serverImageBaseUrl = "https://image.tmdb.org/t/p/w200/"
 }

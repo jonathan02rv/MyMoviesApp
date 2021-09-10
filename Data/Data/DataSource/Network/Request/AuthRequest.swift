@@ -8,5 +8,3 @@
 import Foundation
 
 var headerDefault = ["Content-Type":"application/json","Accept":"application/json"]
-
-let baseUrlConfig = ""
