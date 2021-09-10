@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Gn9-zM-Cjf">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home Movies View Controller-->
+        <scene sceneID="R8l-g8-0Vr">
+            <objects>
+                <viewController storyboardIdentifier="HomeMoviesViewController" id="Gn9-zM-Cjf" customClass="HomeMoviesViewController" customModule="MyMoviesApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uwJ-aE-OPv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello world!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nKe-f8-w8w">
+                                <rect key="frame" x="115" y="273.5" width="90" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7Af-1w-7ii">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="EYZ-oH-LTG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nKe-f8-w8w" firstAttribute="centerX" secondItem="uwJ-aE-OPv" secondAttribute="centerX" id="3LC-7y-tXb"/>
+                            <constraint firstItem="7Af-1w-7ii" firstAttribute="top" secondItem="EYZ-oH-LTG" secondAttribute="top" id="Cpm-UA-gMJ"/>
+                            <constraint firstItem="7Af-1w-7ii" firstAttribute="trailing" secondItem="EYZ-oH-LTG" secondAttribute="trailing" id="RyK-9l-wz8"/>
+                            <constraint firstItem="7Af-1w-7ii" firstAttribute="leading" secondItem="EYZ-oH-LTG" secondAttribute="leading" id="YDx-3G-70o"/>
+                            <constraint firstItem="7Af-1w-7ii" firstAttribute="bottom" secondItem="EYZ-oH-LTG" secondAttribute="bottom" id="aFT-1H-HtV"/>
+                            <constraint firstItem="nKe-f8-w8w" firstAttribute="centerY" secondItem="uwJ-aE-OPv" secondAttribute="centerY" id="cNb-xC-OJM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="movieTable" destination="7Af-1w-7ii" id="9Qg-19-W4f"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="faF-El-dET" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="215.625" y="95.070422535211264"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
