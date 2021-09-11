@@ -11,9 +11,11 @@ import Domain
 public struct MoviesRepository:MoviesRepositoryProtocol{
     
     private let networkDataSource: DataSourceNetworkProtocol
+    private let localDataSource: DataSourceLocalProtocol
     
     public init(){
         self.networkDataSource = DataSourceNetwork()
+        self.localDataSource = DataSourceLocal()
     }
     
     public func getMoviesList(_ completion: @escaping (Result<[MovieModel], ErrorModel>) -> Void) {
