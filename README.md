@@ -1,5 +1,5 @@
 # MyMoviesApp
-# MVVM-C - UIKit
+# MVVM-C / UIKit
 
 This project showed 3 modules: UI, Domain, and Data layer for decoupling the code from the user interface, business logic, and the network or local data source.
 
