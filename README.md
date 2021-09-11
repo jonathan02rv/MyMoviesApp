@@ -3,6 +3,8 @@
 
 This project showed 3 modules: UI, Domain, and Data layer for decoupling the code from the user interface, business logic, and the network or local data source.
 
+Setup three enviroments: DEV, UAT, and PROD
+
 UI Layer (iOS project):
 -----------------------
 - In this example, I implemented MVVM-C design pattern with UIKit for UI Layer. But we can use VIPER, MVP, MVC and so on.
