@@ -14,6 +14,7 @@ protocol HomeMoviesViewModelProtocol{
     func getCountMovies()->Int
     func getAllMovies()->[MovieModel]
     func getMovie(row:Int)->MovieModel
+    func getDataDetail(row:Int)->ViewData
 }
 
 class HomeMoviesViewModel: HomeMoviesViewModelProtocol{
@@ -51,6 +52,11 @@ class HomeMoviesViewModel: HomeMoviesViewModelProtocol{
     
     func getMovie(row:Int)->MovieModel{
         return dataModel[row]
+    }
+    
+    func getDataDetail(row:Int)->ViewData{
+        let movie = dataModel[row]
+        return (DetailMovieViewData(title: movie.title, score: movie.voteAverage, datePremier: movie.datePremier, image: movie.image, sinopsis: movie.sinopsis)) as ViewData
     }
     
     func getCountMovies()->Int{

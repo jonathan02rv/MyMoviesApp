@@ -13,12 +13,14 @@ public struct MovieModel{
     public let sinopsis:String
     public let voteAverage: Double
     public let image: String
+    public let datePremier: String
     
-    public init(movieId:Int, title:String, sinopsis:String, voteAverage: Double, image: String){
+    public init(movieId:Int, title:String, sinopsis:String, voteAverage: Double, image: String, datePremier:String){
         self.title = title
         self.sinopsis = sinopsis
         self.movieId = movieId
         self.voteAverage = voteAverage
         self.image = image
+        self.datePremier = datePremier
     }
 }
