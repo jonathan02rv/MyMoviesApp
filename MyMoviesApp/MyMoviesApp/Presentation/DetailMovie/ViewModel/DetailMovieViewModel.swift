@@ -6,18 +6,26 @@
 //
 
 import Foundation
+import Domain
 
 protocol DetailMovieViewModelProtocol{
-    func callDetailMoview()
+    func callVideoTrailer()
     func getDetailData()->DetailMovieViewData?
 }
 
 class DetailMovieViewModel: DetailMovieViewModelProtocol{
     
     var actionData = {() -> Void in}
+    var actionDataVideo = {() -> Void in}
     var dataModel : DetailMovieViewData? {
         didSet{
             actionData()
+        }
+    }
+    
+    var videoArrayData = [VideoMovieModel]() {
+        didSet{
+            actionDataVideo()
         }
     }
     
@@ -31,7 +39,15 @@ class DetailMovieViewModel: DetailMovieViewModelProtocol{
         return dataModel
     }
     
-    func callDetailMoview(){
-        
+    func callVideoTrailer(){
+        guard let moviewId = dataModel?.movieId else{return}
+        useCaseDetail.getVideo(movieId: moviewId) { [weak self](result) in
+            switch result{
+            case .success(let data):
+                self?.videoArrayData = data
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
 }

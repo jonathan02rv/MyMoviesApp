@@ -9,4 +9,5 @@ import Foundation
 
 protocol DataSourceNetworkProtocol{
     func getMoviesList(request: RequestObject,_ completion: @escaping (Swift.Result<[MovieEntity], ErrorEntity>) -> Void)
+    func getVideo(request: RequestObject,_ completion: @escaping (Swift.Result<[VideoMovieEntity], ErrorEntity>) -> Void)
 }
