@@ -19,6 +19,7 @@ public struct MoviesRepository:MoviesRepositoryProtocol{
     public func getMoviesList(_ completion: @escaping (Result<[MovieModel], ErrorModel>) -> Void) {
         
         let request = RequestOBjectMostPopular()
+        
         networkDataSource.getMoviesList(request: request) { (result) in
             switch result{
             case .success(let data):
@@ -29,5 +30,16 @@ public struct MoviesRepository:MoviesRepositoryProtocol{
         }
     }
     
+    public func getVideo(movieId: String,_ completion: @escaping (Swift.Result<[VideoMovieModel], ErrorModel>) -> Void){
+        let request2 = RequestOBjectVideo(idMovie: movieId)
+        networkDataSource.getVideo(request: request2) { (result) in
+            switch result{
+            case .success(let data):
+                completion(.success(VideoMovieEntity.maper(data: data)))
+            case .failure(let error):
+                completion(.failure(ErrorEntity.maper(errorData: error)))
+            }
+        }
+    }
     
 }

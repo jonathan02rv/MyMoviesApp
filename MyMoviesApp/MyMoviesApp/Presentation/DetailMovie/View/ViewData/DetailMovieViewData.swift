@@ -13,4 +13,5 @@ struct DetailMovieViewData:ViewData{
     let datePremier: String
     let image:String
     let sinopsis:String
+    let movieId:String
 }

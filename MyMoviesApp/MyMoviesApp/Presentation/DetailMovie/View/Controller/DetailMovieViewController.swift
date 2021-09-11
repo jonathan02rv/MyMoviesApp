@@ -21,12 +21,13 @@ class DetailMovieViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
-        fillView()
         // Do any additional setup after loading the view.
     }
 
     private func setupView(){
         self.configurator.configure(controller: self)
+        fillView()
+        self.viewModel.callVideoTrailer()
     }
     
     private func fillView(){

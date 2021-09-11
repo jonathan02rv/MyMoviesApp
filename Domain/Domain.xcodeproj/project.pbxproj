@@ -14,6 +14,7 @@
 		3F63CC9726EBA0AD006D0CA2 /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F63CC9626EBA0AD006D0CA2 /* MovieModel.swift */; };
 		3F63CCBA26EBA4BB006D0CA2 /* MoviesUsesCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F63CCB926EBA4BB006D0CA2 /* MoviesUsesCases.swift */; };
 		3F63CCBE26EBA582006D0CA2 /* MoviesRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F63CCBD26EBA582006D0CA2 /* MoviesRepositoryProtocol.swift */; };
+		3F8AAA8826EC827100939DA2 /* VideoMovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8AAA8726EC827100939DA2 /* VideoMovieModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +38,7 @@
 		3F63CC9626EBA0AD006D0CA2 /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
 		3F63CCB926EBA4BB006D0CA2 /* MoviesUsesCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesUsesCases.swift; sourceTree = "<group>"; };
 		3F63CCBD26EBA582006D0CA2 /* MoviesRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesRepositoryProtocol.swift; sourceTree = "<group>"; };
+		3F8AAA8726EC827100939DA2 /* VideoMovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoMovieModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 			children = (
 				3F22545E26EBC2690004C2A1 /* MovieModel */,
 				3F22545D26EBC2610004C2A1 /* ErrorModel */,
+				3F8AAA8726EC827100939DA2 /* VideoMovieModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -250,6 +253,7 @@
 				3F63CCBA26EBA4BB006D0CA2 /* MoviesUsesCases.swift in Sources */,
 				3F63CC9726EBA0AD006D0CA2 /* MovieModel.swift in Sources */,
 				3F22546026EBC27E0004C2A1 /* ErrorModel.swift in Sources */,
+				3F8AAA8826EC827100939DA2 /* VideoMovieModel.swift in Sources */,
 				3F63CCBE26EBA582006D0CA2 /* MoviesRepositoryProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

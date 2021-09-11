@@ -9,23 +9,19 @@ import Foundation
 import Domain
 
 protocol DetailMovieUseCaseProtocol {
-    func getDetailMoview(movieId: Int)
-    func getMoviesList(_ completion:@escaping (Swift.Result<[MovieModel],ErrorModel>)->Void)
+    func getVideo(movieId: String,_ completion: @escaping (Swift.Result<[VideoMovieModel], ErrorModel>) -> Void)
 }
 
 struct DetailMovieUseCase:DetailMovieUseCaseProtocol{
-    
+        
     let useCases: MoviesUsesCasesProtocol
     
     init(useCases: MoviesUsesCasesProtocol) {
         self.useCases = useCases
     }
     
-    func getDetailMoview(movieId: Int){
-        
+    func getVideo(movieId: String, _ completion: @escaping (Result<[VideoMovieModel], ErrorModel>) -> Void) {
+        useCases.getVideo(movieId: movieId, completion)
     }
-    
-    func getMoviesList(_ completion:@escaping (Swift.Result<[MovieModel],ErrorModel>)->Void){
-        useCases.getMoviesList(completion)
-    }
+  
 }

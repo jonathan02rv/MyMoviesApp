@@ -56,7 +56,7 @@ class HomeMoviesViewModel: HomeMoviesViewModelProtocol{
     
     func getDataDetail(row:Int)->ViewData{
         let movie = dataModel[row]
-        return (DetailMovieViewData(title: movie.title, score: movie.voteAverage, datePremier: movie.datePremier, image: movie.image, sinopsis: movie.sinopsis)) as ViewData
+        return (DetailMovieViewData(title: movie.title, score: movie.voteAverage, datePremier: movie.datePremier, image: movie.image, sinopsis: movie.sinopsis, movieId: "\(movie.movieId)")) as ViewData
     }
     
     func getCountMovies()->Int{
