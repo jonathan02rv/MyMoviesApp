@@ -9,8 +9,11 @@ import Foundation
 import Domain
 
 protocol DetailMovieViewModelProtocol{
+    var actionData:()->() {get set}
+    var actionDataVideo:()->() {get set}
     func callVideoTrailer()
     func getDetailData()->DetailMovieViewData?
+    func getFirstVideo()->VideoMovieModel?
 }
 
 class DetailMovieViewModel: DetailMovieViewModelProtocol{
@@ -37,6 +40,10 @@ class DetailMovieViewModel: DetailMovieViewModelProtocol{
     
     func getDetailData()->DetailMovieViewData?{
         return dataModel
+    }
+    
+    func getFirstVideo()->VideoMovieModel?{
+        videoArrayData.first
     }
     
     func callVideoTrailer(){

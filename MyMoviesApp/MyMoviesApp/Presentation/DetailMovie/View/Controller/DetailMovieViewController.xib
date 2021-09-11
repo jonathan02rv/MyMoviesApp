@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailMovieViewController" customModule="MyMoviesApp" customModuleProvider="target">
             <connections>
+                <outlet property="btnSeeTrailer" destination="7hb-t9-nNl" id="iWU-fx-xzt"/>
                 <outlet property="datePremier" destination="dvA-D5-alL" id="Ofh-qM-LSr"/>
                 <outlet property="movieImage" destination="CCZ-tk-Tmh" id="nNC-MJ-Suu"/>
                 <outlet property="score" destination="yw0-sW-6bn" id="R54-CD-de5"/>
@@ -36,7 +37,7 @@
                                     </constraints>
                                 </imageView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="OpV-wL-Wat">
-                                    <rect key="frame" x="20" y="219" width="280" height="174"/>
+                                    <rect key="frame" x="20" y="265" width="280" height="174"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="xO9-t6-iDb">
                                             <rect key="frame" x="0.0" y="0.0" width="280" height="46.5"/>
@@ -106,15 +107,28 @@
                                         <constraint firstAttribute="trailing" secondItem="xO9-t6-iDb" secondAttribute="trailing" id="hKW-NF-hMj"/>
                                     </constraints>
                                 </stackView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7hb-t9-nNl">
+                                    <rect key="frame" x="97" y="204" width="126" height="46"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="126" id="UYb-K1-AfE"/>
+                                        <constraint firstAttribute="height" constant="46" id="VWe-oa-2Cf"/>
+                                    </constraints>
+                                    <state key="normal" title="See Trailer"/>
+                                    <connections>
+                                        <action selector="seeTrailerAction:" destination="-1" eventType="touchUpInside" id="oN7-gM-PAb"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
                                 <constraint firstAttribute="trailing" secondItem="CCZ-tk-Tmh" secondAttribute="trailing" constant="20" id="GDz-z0-w7N"/>
+                                <constraint firstItem="OpV-wL-Wat" firstAttribute="top" secondItem="7hb-t9-nNl" secondAttribute="bottom" constant="15" id="JQ0-Pc-liR"/>
                                 <constraint firstAttribute="trailing" secondItem="OpV-wL-Wat" secondAttribute="trailing" constant="20" id="SET-g4-D4V"/>
-                                <constraint firstItem="OpV-wL-Wat" firstAttribute="top" secondItem="CCZ-tk-Tmh" secondAttribute="bottom" constant="25" id="X0m-ml-5cP"/>
                                 <constraint firstItem="OpV-wL-Wat" firstAttribute="leading" secondItem="3QN-5O-Bfl" secondAttribute="leading" constant="20" id="a9u-rf-TC8"/>
                                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="OpV-wL-Wat" secondAttribute="bottom" constant="15" id="f0V-89-QhZ"/>
                                 <constraint firstItem="CCZ-tk-Tmh" firstAttribute="top" secondItem="3QN-5O-Bfl" secondAttribute="top" constant="20" id="kDh-li-VyC"/>
+                                <constraint firstItem="7hb-t9-nNl" firstAttribute="top" secondItem="CCZ-tk-Tmh" secondAttribute="bottom" constant="10" id="khi-oe-0JM"/>
+                                <constraint firstItem="7hb-t9-nNl" firstAttribute="centerX" secondItem="3QN-5O-Bfl" secondAttribute="centerX" id="los-j4-u3G"/>
                                 <constraint firstItem="CCZ-tk-Tmh" firstAttribute="leading" secondItem="3QN-5O-Bfl" secondAttribute="leading" constant="20" id="ocj-xb-knd"/>
                             </constraints>
                         </view>

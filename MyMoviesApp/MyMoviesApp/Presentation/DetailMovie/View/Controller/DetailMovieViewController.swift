@@ -9,6 +9,7 @@ import UIKit
 
 class DetailMovieViewController: UIViewController {
 
+    @IBOutlet weak var btnSeeTrailer: UIButton! {didSet{btnSeeTrailer.isEnabled = false}}
     @IBOutlet weak var movieImage: UIImageView!
     @IBOutlet weak var sinopsis: UILabel!
     @IBOutlet weak var datePremier: UILabel!
@@ -26,8 +27,7 @@ class DetailMovieViewController: UIViewController {
 
     private func setupView(){
         self.configurator.configure(controller: self)
-        fillView()
-        self.viewModel.callVideoTrailer()
+        getVideo()
     }
     
     private func fillView(){
@@ -38,5 +38,38 @@ class DetailMovieViewController: UIViewController {
         self.score.text = "\(dataModel.score)"
         self.movieImage.downloaded(from: dataModel.image)
     }
+    
+    
+    @IBAction func seeTrailerAction(_ sender: Any) {
+        seeTrailerFromUrl()
+    }
+    
+}
 
+extension DetailMovieViewController{
+    
+    private func seeTrailerFromUrl(){
+        guard let urlString = viewModel.getFirstVideo()?.youTubeUrl, let url = URL(string: urlString) else{return}
+        UIApplication.shared.open(url)
+    }
+    
+    func getVideo(){
+        self.viewModel.callVideoTrailer()
+    }
+    
+    func bindEnableSeeVideo(){
+        self.viewModel.actionDataVideo = { [weak self]() in
+            DispatchQueue.main.async {
+                self?.btnSeeTrailer.isEnabled = (self?.viewModel.getFirstVideo() != nil)
+            }
+        }
+    }
+    
+    func bind(){
+        self.viewModel.actionData = { [weak self]() in
+            DispatchQueue.main.async {
+                self?.fillView()
+            }
+        }
+    }
 }
