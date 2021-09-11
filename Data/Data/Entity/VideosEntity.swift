@@ -9,7 +9,6 @@ import Foundation
 import Domain
 
 struct VideoEntity: Codable{
-    let page:Int
     let results:[VideoMovieEntity]
 }
 

@@ -15,11 +15,11 @@ protocol DetailMovieConfiguratorProtocol{
 
 struct DetailMovieConfigurator:DetailMovieConfiguratorProtocol{
     func configure(controller: DetailMovieViewController) {
-        //let cordinator = HomeMoviesCordinator(view: controller)
         let useCase = DetailMovieUseCase(useCases: MoviesUsesCases(repository: MoviesRepository()))
-        let viewModel = DetailMovieViewModel(useCaseDetail: useCase)
-        viewModel.dataModel = controller.viewData as? DetailMovieViewData
+        let viewModel = DetailMovieViewModel(useCaseDetail: useCase)        
         controller.viewModel = viewModel
-        //controller.cordinator = cordinator
+        controller.bind()
+        controller.bindEnableSeeVideo()
+        viewModel.dataModel = controller.viewData as? DetailMovieViewData
     }
 }
