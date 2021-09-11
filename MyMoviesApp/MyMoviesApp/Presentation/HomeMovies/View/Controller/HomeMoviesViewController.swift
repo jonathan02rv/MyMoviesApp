@@ -16,11 +16,17 @@ class HomeMoviesViewController: UIViewController {
     
     
     var viewModel: HomeMoviesViewModelProtocol!
+    var cordinator: HomeMoviesCordinatorProtocol!
     let configurator = HomeViewConfigurator()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.title = "My Movies"
     }
     
     private func setupView(){
@@ -64,6 +70,12 @@ extension HomeMoviesViewController: UITableViewDelegate, UITableViewDataSource{
         cell.movieImage.downloaded(from: movie.image)
         return cell
     }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.cordinator.routeToDetalMoview(data: viewModel.getDataDetail(row: indexPath.row))
+    }
+
     
     
 }

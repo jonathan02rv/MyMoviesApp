@@ -19,14 +19,14 @@ struct MovieEntity:Codable{
     let vote_average:Double
     let overview:String
     let backdrop_path:String
-    
+    let release_date:String
    
 }
 
 extension MovieEntity{
     static func maperArray(data:[MovieEntity])->[MovieModel]{
         data.map{
-            MovieModel(movieId: $0.id, title: $0.title, sinopsis: $0.overview, voteAverage: $0.vote_average, image: "\(AppEnvironment.configuration.serverImageBaseUrl)\($0.backdrop_path)")
+            MovieModel(movieId: $0.id, title: $0.title, sinopsis: $0.overview, voteAverage: $0.vote_average, image: "\(AppEnvironment.configuration.serverImageBaseUrl)\($0.backdrop_path)", datePremier: $0.release_date)
         }
     }
 }

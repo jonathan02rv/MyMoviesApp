@@ -14,7 +14,9 @@ protocol HomeViewConfiguratorProtocol{
 }
 struct HomeViewConfigurator {
     func configure(controller: HomeMoviesViewController){
+        let cordinator = HomeMoviesCordinator(view: controller)
         let useCase = HomeMoviesUseCase(useCases: MoviesUsesCases(repository: MoviesRepository()))
         controller.viewModel = HomeMoviesViewModel(useCaseHome: useCase)
+        controller.cordinator = cordinator
     }
 }
